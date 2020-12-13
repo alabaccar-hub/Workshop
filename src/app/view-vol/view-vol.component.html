@@ -1,0 +1,23 @@
+<br/><br/>
+<table >
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>date</th>
+    <th>destination</th>
+    <th>depart</th>
+    <th>nombre de voyageurs</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let vol of vols">
+    <td>{{vol.id}}</td>
+    <td>{{vol.date | date:'short' }}</td>
+    <td>{{vol.destination}}</td>
+    <td>{{vol.depart}}</td>
+    <td>{{vol.nbVoyageur}}</td>
+    <td><input type="button" (click)="delete(vol.id)" value="supprimer"></td>
+  </tr>
+  </tbody>
+</table>
